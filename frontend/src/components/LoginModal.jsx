@@ -21,13 +21,15 @@ const LoginModal = ({ show, onClose, onLoginSuccess }) => {
 
       // siempre parseamos JSON aunque sea 401
       const data = await response.json();
+      console.log("Respuesta del backend:", data);
+
 
       if (data.success) {
         // login exitoso
         localStorage.setItem("auth", "true");
         if (onLoginSuccess) onLoginSuccess();
         onClose();
-        navigate("/dashboard");
+        navigate("/trabajadores");
       } else {
         // credenciales incorrectas
         setError(data.message || "Usuario o contraseña incorrectos");

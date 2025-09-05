@@ -9,10 +9,11 @@ function Dashboard() {
 
   return (
     <>
-      <Navbar onLoginClick={() => setShowLogin(true)} />
+      {}
+      <Navbar />
 
       <div style={{ padding: "100px 20px 20px" }}>
-        {/* le doy un padding-top extra para que el contenido no quede tapado por la navbar fija */}
+        {}
         <h1>Control de EPP+</h1>
 
         <Checkboxes />
